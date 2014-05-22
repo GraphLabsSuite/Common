@@ -49,6 +49,14 @@
     <PreBuildEvent>cd "$(SolutionDir)"
 SubWCRev "." "AssemblyVersion.cs.template" "$(ProjectDir)Properties\AssemblyVersion.cs"</PreBuildEvent>
   </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>IF $(ConfigurationName) == Release (
+   rmdir /S /Q "$(SolutionDir)..\versions\latest\$(ProjectName)\"
+   xcopy "$(ProjectDir)bin\Release" "$(SolutionDir)..\versions\latest\$(ProjectName)\" /E /Y /I
+) ELSE (
+   echo Пропускаю копирование библиотек - не релизная конфигурация.
+)</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

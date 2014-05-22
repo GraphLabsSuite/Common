@@ -9,4 +9,8 @@
 //
 // Можно задать все значения или принять номер построения и номер редакции по умолчанию, 
 // используя "*", как показано ниже:
+#if DEBUG
 [assembly: AssemblyVersion("$WCMODS?0.0.0:1.0.$WCREV$$.*")]
+#else
+[assembly: AssemblyVersion("1.0.$WCREV$.*")]
+#endif
