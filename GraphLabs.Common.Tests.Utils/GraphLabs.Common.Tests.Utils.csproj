@@ -7,8 +7,8 @@
     <ProjectGuid>{13C73042-BC1B-4956-8EDF-B5C3DDDDB519}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GraphLabs.Commont.Tests.Utils</RootNamespace>
-    <AssemblyName>GraphLabs.Commont.Tests.Utils</AssemblyName>
+    <RootNamespace>GraphLabs.Common.Tests.Utils</RootNamespace>
+    <AssemblyName>GraphLabs.Common.Tests.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

@@ -2,7 +2,7 @@
 using GraphLabs.Common.Utils;
 using NUnit.Framework;
 
-namespace GraphLabs.Commont.Tests.Utils
+namespace GraphLabs.Common.Tests.Utils
 {
     /// <summary> Тесты <see cref="ExpressionUtility"/> </summary>
     [TestFixture]
