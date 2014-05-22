@@ -7,7 +7,7 @@
 // ReSharper disable IntroduceOptionalParameters.Global
 // ReSharper disable MemberCanBeProtected.Global
 // ReSharper disable InconsistentNaming
-// ReSharper disable CheckNamespace
+// ReSharper disable once CheckNamespace
 
 namespace JetBrains.Annotations
 {
@@ -26,6 +26,7 @@ namespace JetBrains.Annotations
       AttributeTargets.Method | AttributeTargets.Parameter |
       AttributeTargets.Property | AttributeTargets.Delegate |
       AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class CanBeNullAttribute : Attribute { }
 
     /// <summary>
@@ -40,6 +41,7 @@ namespace JetBrains.Annotations
       AttributeTargets.Method | AttributeTargets.Parameter |
       AttributeTargets.Property | AttributeTargets.Delegate |
       AttributeTargets.Field, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class NotNullAttribute : Attribute { }
 
     /// <summary>
@@ -57,6 +59,7 @@ namespace JetBrains.Annotations
     [AttributeUsage(
       AttributeTargets.Constructor | AttributeTargets.Method,
       AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class StringFormatMethodAttribute : Attribute
     {
         /// <param name="formatParameterName">
@@ -82,6 +85,7 @@ namespace JetBrains.Annotations
     /// }
     /// </code></example>
     [AttributeUsage(AttributeTargets.Parameter, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class InvokerParameterNameAttribute : Attribute { }
 
     /// <summary>
@@ -121,6 +125,7 @@ namespace JetBrains.Annotations
     /// </list>
     /// </example>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class NotifyPropertyChangedInvocatorAttribute : Attribute
     {
         public NotifyPropertyChangedInvocatorAttribute() { }
@@ -175,6 +180,7 @@ namespace JetBrains.Annotations
     /// </code></item>
     /// </list></examples>
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = true, Inherited = true)]
+    [CoverageExclude]
     public sealed class ContractAnnotationAttribute : Attribute
     {
         public ContractAnnotationAttribute([NotNull] string contract)
@@ -200,6 +206,7 @@ namespace JetBrains.Annotations
     /// }
     /// </code></example>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class LocalizationRequiredAttribute : Attribute
     {
         public LocalizationRequiredAttribute() : this(true) { }
@@ -233,6 +240,7 @@ namespace JetBrains.Annotations
     [AttributeUsage(
       AttributeTargets.Interface | AttributeTargets.Class |
       AttributeTargets.Struct, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class CannotApplyEqualityOperatorAttribute : Attribute { }
 
     /// <summary>
@@ -247,6 +255,7 @@ namespace JetBrains.Annotations
     /// </code></example>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true, Inherited = true)]
     [BaseTypeRequired(typeof(Attribute))]
+    [CoverageExclude]
     public sealed class BaseTypeRequiredAttribute : Attribute
     {
         public BaseTypeRequiredAttribute([NotNull] Type baseType)
@@ -264,6 +273,7 @@ namespace JetBrains.Annotations
     /// will not be marked as unused (as well as by other usage inspections)
     /// </summary>
     [AttributeUsage(AttributeTargets.All, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class UsedImplicitlyAttribute : Attribute
     {
         public UsedImplicitlyAttribute()
@@ -292,6 +302,7 @@ namespace JetBrains.Annotations
     /// (as well as by other usage inspections)
     /// </summary>
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = false, Inherited = true)]
+    [CoverageExclude]
     public sealed class MeansImplicitUseAttribute : Attribute
     {
         public MeansImplicitUseAttribute()
@@ -317,6 +328,7 @@ namespace JetBrains.Annotations
     }
 
     [Flags]
+    [CoverageExclude]
     public enum ImplicitUseKindFlags
     {
         Default = Access | Assign | InstantiatedWithFixedConstructorSignature,
@@ -339,6 +351,7 @@ namespace JetBrains.Annotations
     /// or <see cref="UsedImplicitlyAttribute"/>
     /// </summary>
     [Flags]
+    [CoverageExclude]
     public enum ImplicitUseTargetFlags
     {
         Default = Itself,
@@ -354,6 +367,7 @@ namespace JetBrains.Annotations
     /// which should not be removed and so is treated as used
     /// </summary>
     [MeansImplicitUse]
+    [CoverageExclude]
     public sealed class PublicAPIAttribute : Attribute
     {
         public PublicAPIAttribute() { }
@@ -374,6 +388,7 @@ namespace JetBrains.Annotations
     /// while the method is executed
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter, Inherited = true)]
+    [CoverageExclude]
     public sealed class InstantHandleAttribute : Attribute { }
 
     /// <summary>
@@ -388,6 +403,7 @@ namespace JetBrains.Annotations
     /// }
     /// </code></example>
     [AttributeUsage(AttributeTargets.Method, Inherited = true)]
+    [CoverageExclude]
     public sealed class PureAttribute : Attribute { }
 
     /// <summary>
@@ -396,6 +412,7 @@ namespace JetBrains.Annotations
     /// starting from web root (~)
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public class PathReferenceAttribute : Attribute
     {
         public PathReferenceAttribute() { }
@@ -417,6 +434,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
+    [CoverageExclude]
     public sealed class AspMvcActionAttribute : Attribute
     {
         public AspMvcActionAttribute() { }
@@ -435,6 +453,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcAreaAttribute : PathReferenceAttribute
     {
         public AspMvcAreaAttribute() { }
@@ -455,6 +474,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.ChildActionExtensions.RenderAction(HtmlHelper, String, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
+    [CoverageExclude]
     public sealed class AspMvcControllerAttribute : Attribute
     {
         public AspMvcControllerAttribute() { }
@@ -473,6 +493,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Controller.View(String, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcMasterAttribute : Attribute { }
 
     /// <summary>
@@ -481,6 +502,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Controller.View(String, Object)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcModelTypeAttribute : Attribute { }
 
     /// <summary>
@@ -491,6 +513,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.RenderPartialExtensions.RenderPartial(HtmlHelper, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
+    [CoverageExclude]
     public sealed class AspMvcPartialViewAttribute : PathReferenceAttribute { }
 
     /// <summary>
@@ -498,6 +521,7 @@ namespace JetBrains.Annotations
     /// for MVC views within a class or a method.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method)]
+    [CoverageExclude]
     public sealed class AspMvcSupressViewErrorAttribute : Attribute { }
 
     /// <summary>
@@ -506,6 +530,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.DisplayExtensions.DisplayForModel(HtmlHelper, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcDisplayTemplateAttribute : Attribute { }
 
     /// <summary>
@@ -514,6 +539,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Html.EditorExtensions.EditorForModel(HtmlHelper, String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcEditorTemplateAttribute : Attribute { }
 
     /// <summary>
@@ -522,6 +548,7 @@ namespace JetBrains.Annotations
     /// <c>System.ComponentModel.DataAnnotations.UIHintAttribute(System.String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter)]
+    [CoverageExclude]
     public sealed class AspMvcTemplateAttribute : Attribute { }
 
     /// <summary>
@@ -531,6 +558,7 @@ namespace JetBrains.Annotations
     /// <c>System.Web.Mvc.Controller.View(Object)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method)]
+    [CoverageExclude]
     public sealed class AspMvcViewAttribute : PathReferenceAttribute { }
 
     /// <summary>
@@ -545,11 +573,13 @@ namespace JetBrains.Annotations
     /// }
     /// </code></example>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Property)]
+    [CoverageExclude]
     public sealed class AspMvcActionSelectorAttribute : Attribute { }
 
     [AttributeUsage(
       AttributeTargets.Parameter | AttributeTargets.Property |
       AttributeTargets.Field, Inherited = true)]
+    [CoverageExclude]
     public sealed class HtmlElementAttributesAttribute : Attribute
     {
         public HtmlElementAttributesAttribute() { }
@@ -565,6 +595,7 @@ namespace JetBrains.Annotations
     [AttributeUsage(
       AttributeTargets.Parameter | AttributeTargets.Field |
       AttributeTargets.Property, Inherited = true)]
+    [CoverageExclude]
     public sealed class HtmlAttributeValueAttribute : Attribute
     {
         public HtmlAttributeValueAttribute([NotNull] string name)
@@ -584,5 +615,16 @@ namespace JetBrains.Annotations
     /// <c>System.Web.WebPages.WebPageBase.RenderSection(String)</c>
     /// </summary>
     [AttributeUsage(AttributeTargets.Parameter | AttributeTargets.Method, Inherited = true)]
+    [CoverageExclude]
     public sealed class RazorSectionAttribute : Attribute { }
+
+
+    // Misc
+
+    /// <summary> Помечать код, который должен быть пропущен dotCover'ом </summary>
+    [AttributeUsage(AttributeTargets.All, Inherited = false)]
+    [CoverageExclude]
+    public class CoverageExcludeAttribute : Attribute
+    {
+    }
 }
