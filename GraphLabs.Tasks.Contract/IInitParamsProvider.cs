@@ -17,12 +17,16 @@ namespace GraphLabs.Tasks.Contract
         /// <summary> Разобрать строку с параметрами инициализации </summary>
         [NotNull]
         InitParams ParseInitParamsString(string initParamsString);
+
+        /// <summary> Ключ параметра в строке инициализации </summary>
+        [NotNull]
+        string ParamsKey { get; }
     }
 
 
     /// <summary> Поставщик параметров инициализации задания - контракты </summary>
     [ContractClassFor(typeof(IInitParamsProvider))]
-    public class InitParamsProviderContracts : IInitParamsProvider
+    internal class InitParamsProviderContracts : IInitParamsProvider
     {
         // ReSharper disable AssignNullToNotNullAttribute
 
@@ -42,6 +46,16 @@ namespace GraphLabs.Tasks.Contract
             Contract.Ensures(Contract.Result<InitParams>() != null);
 
             return default(InitParams);
+        }
+
+        /// <summary> Ключ параметра в строке инициализации </summary>
+        public string ParamsKey
+        {
+            get
+            {
+                Contract.Ensures(!string.IsNullOrWhiteSpace(Contract.Result<string>()));
+                return default(string);
+            }
         }
     }
 }

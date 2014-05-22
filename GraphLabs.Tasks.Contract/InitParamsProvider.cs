@@ -7,7 +7,13 @@ namespace GraphLabs.Tasks.Contract
     /// <summary> Поставщик параметров инициализации задания </summary>
     public class InitParamsProvider : IInitParamsProvider
     {
-        public const string PARAMETER_KEY = "data";
+        private const string PARAMETER_KEY = "data";
+
+        /// <summary> Ключ параметра в строке инициализации </summary>
+        public string ParamsKey 
+        {
+            get { return PARAMETER_KEY; }
+        }
 
         /// <summary> Получить строку с параметрами инициализации </summary>
         public string GetInitParamsString(InitParams parameters)
