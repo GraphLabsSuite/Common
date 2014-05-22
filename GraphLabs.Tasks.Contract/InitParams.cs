@@ -24,13 +24,13 @@ namespace GraphLabs.Tasks.Contract
         }
 
         /// <summary> Для контрольного режима </summary>
-        public InitParams ForControlMode(Guid sessionGuid, long taskId, long labId)
+        public static InitParams ForControlMode(Guid sessionGuid, long taskId, long labId)
         {
             return new InitParams(taskId, null, labId, sessionGuid);
         }
 
         /// <summary> Для ознакомительного режима </summary>
-        public InitParams ForDemoMode(Guid sessionGuid, long taskId, long variantId, long labId)
+        public static InitParams ForDemoMode(Guid sessionGuid, long taskId, long variantId, long labId)
         {
             return new InitParams(taskId, variantId, labId, sessionGuid);
         }
