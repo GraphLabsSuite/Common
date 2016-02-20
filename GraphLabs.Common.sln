@@ -1,12 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphLabs.Common.Utils", "GraphLabs.Common.Utils\GraphLabs.Common.Utils.csproj", "{78646F13-98FF-457F-B9E1-A43C7D12FD03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F673D57E-8181-4013-91D8-21F5A5AD02C7}"
 	ProjectSection(SolutionItems) = preProject
 		AssemblyInfo.General.cs = AssemblyInfo.General.cs
-		AssemblyVersion.cs.template = AssemblyVersion.cs.template
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphLabs.Tasks.Contract", "GraphLabs.Tasks.Contract\GraphLabs.Tasks.Contract.csproj", "{72AE0569-7601-44B3-8C7F-EBCFF8747816}"
@@ -20,6 +21,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{836E71
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributive", "Distributive", "{6E2DE8B3-ED4C-4465-9BE7-DFCD6386A4E1}"
+	ProjectSection(SolutionItems) = preProject
+		Distributive\GraphLabs.Common.Utils.nuspec = Distributive\GraphLabs.Common.Utils.nuspec
+		GraphLabs.Tasks.Contract.xml = GraphLabs.Tasks.Contract.xml
 	EndProjectSection
 EndProject
 Global

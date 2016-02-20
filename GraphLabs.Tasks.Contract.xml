@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>GraphLabs.Tasks.Contract</id>
+    <version>1.1.0</version>
+    <authors>Святослав Захряпин</authors>
+    <description>Контакт взаимодействия между сайтом и модулем-заданием GraphLabs</description>
+    <tags>GraphLabs Task Contract</tags>
+  </metadata>
+</package>
