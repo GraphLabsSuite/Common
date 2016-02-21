@@ -25,8 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{836E71
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distributive", "Distributive", "{6E2DE8B3-ED4C-4465-9BE7-DFCD6386A4E1}"
 	ProjectSection(SolutionItems) = preProject
-		Distributive\GraphLabs.Common.Utils.nuspec = Distributive\GraphLabs.Common.Utils.nuspec
-		GraphLabs.Tasks.Contract.xml = GraphLabs.Tasks.Contract.xml
+		GraphLabs.Common.Utils\GraphLabs.Common.Utils.nuspec = GraphLabs.Common.Utils\GraphLabs.Common.Utils.nuspec
+		GraphLabs.Tasks.Contract\GraphLabs.Tasks.Contract.nuspec = GraphLabs.Tasks.Contract\GraphLabs.Tasks.Contract.nuspec
 	EndProjectSection
 EndProject
 Global
